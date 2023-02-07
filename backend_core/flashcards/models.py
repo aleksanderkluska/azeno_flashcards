@@ -16,9 +16,11 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
+    # TODO investigate better solution
     def save(self, *args, **kwargs):
         tag = Tag.objects.filter(name=self.name.lower())
 
+        self.name = self.name.lower()
         if not tag:
             self.name = self.name.lower()
             return super().save(*args, **kwargs)
