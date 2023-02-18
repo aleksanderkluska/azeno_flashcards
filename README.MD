@@ -20,7 +20,7 @@
    1. Tworzymy plik serializers.py (format danych)
    2. Unit tests
    
-5. Tworzymy widoki (logikę)
+5. Tworzymy widoki (logikę), jeżeli pelny CRUD to ViewSet
    1. Dobieramy odpowiednią klasę do obsługi widoku [wyszukiwarka widoków](https://www.cdrf.co/)
    2. Widok musi zwracać response lub redirect
    3. Logika uprawnień permission.py
@@ -31,5 +31,7 @@
    2. Podpinamy lokalne urls do globalnych urls -> config/urls.py
    3. Unit tests
 
-7. Postman i stworzenie kolekcji
+7. Sprawdzenie dokumentacji OpenAPI (swagger)
+
+8. Postman i stworzenie kolekcji
    1. Wyeksportowanie kolekcji do repozytorium

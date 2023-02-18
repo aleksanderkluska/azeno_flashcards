@@ -29,7 +29,6 @@ class Tag(models.Model):
 
 
 class Feature(models.Model):
-    # TODO change on delete to active flag
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='%(class)s')
     category = models.CharField(max_length=32, null=True)
     difficulty = models.ForeignKey('DifficultyLevel', on_delete=models.CASCADE, related_name='%(class)s')
@@ -37,6 +36,7 @@ class Feature(models.Model):
     tags = models.ManyToManyField('Tag', related_name='%(class)s')
 
     is_active = models.BooleanField(default=True)
+    is_public = models.BooleanField(default=True)
 
     class Meta:
         abstract = True

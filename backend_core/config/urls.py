@@ -1,4 +1,3 @@
-
 """config URL Configuration
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -20,6 +19,7 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
 )
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('flashcards.urls')),
@@ -27,4 +27,6 @@ urlpatterns = [
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(
         url_name='schema'), name='swagger-ui'),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]
+

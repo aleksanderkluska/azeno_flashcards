@@ -11,6 +11,7 @@ djangorestframework = "==3.14.0"
 drf-spectacular = "==0.25.1"
 djangorestframework-jwt = "==1.11.0"
 djangorestframework-simplejwt = "==5.2.2"
+django-debug-toolbar = "==3.8.1"
 
 [dev-packages]
 
